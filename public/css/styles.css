@@ -1,0 +1,42 @@
+@media print {
+	body * {
+	  visibility: hidden;
+	}
+	.printable, .printable * {
+	  visibility: visible;
+	}
+	.printable button{
+		visibility: hidden;
+	}
+
+	.printable {
+	  position: fixed;
+	  left: 0;
+	  top: 0;
+	}
+}
+
+/* DIV PROPORCIONAL */
+[style*="--aspect-ratio"]::before {
+	content: "" !important;
+	height: 0 !important;
+	float: left !important;
+	padding-bottom: calc( 100% / (var(--aspect-ratio)) ) !important;
+	}
+	[style*="--aspect-ratio"]::after {
+	content: "" !important;
+	display: block !important;
+	clear: both !important;
+}
+
+.force-center {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#matriz .par, #matriz .impar{
+	transition: opacity 1.4s;
+}
