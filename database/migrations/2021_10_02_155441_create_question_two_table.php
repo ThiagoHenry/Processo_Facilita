@@ -16,7 +16,6 @@ class CreateQuestionTwoTable extends Migration
         Schema::create('question_two', function (Blueprint $table) {
             $table->id();
             $table->integer('user_category')->index();
-            // $table->foreignId('user_category')->constrained();
 
             $table->string('user_name');
             $table->string('book_name');
