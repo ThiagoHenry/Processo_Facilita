@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class QuestionTwo extends Model
+class Book extends Model
 {
-    use HasFactory;
+	
+	use HasFactory;
 
-	protected $table = 'question_two';
+
 
 	public function category()
 	{
-		return $this->belongsTo('App\Models\QuestionTwo');
+		return $this->belongsTo('App\models\Book');
 	}
 }
-

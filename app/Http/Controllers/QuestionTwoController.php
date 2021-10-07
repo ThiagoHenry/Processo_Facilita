@@ -10,11 +10,11 @@ class QuestionTwoController extends Controller
 {
 	public function index(QuestionRepository $q)
 	{
-		$categories = $q->category_question_two();
+		$categories = $q->category_all();
 
 		$question = $q->filter(2);
 
-		$data = $q->question_two();
+		$data = $q->all();
 			
 		foreach ($data as $item) {
 			$item->limit = date('d/m/Y', strtotime("+$item->days days", strtotime($item->created_at)));

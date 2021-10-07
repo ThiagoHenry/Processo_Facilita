@@ -9,8 +9,9 @@ class Category extends Model
 {
     use HasFactory;
 
-	public function users()
+	public function books()
 	{
-		return $this->hasMany('App\Models\Category')->orderBy('id');
+		// return $this->hasMany('App\Models\QuestionTwo')->orderBy('id');
+		return $this->hasMany('App\Models\Book');
 	}
 }

@@ -42,14 +42,14 @@
 				</div>
 				
 				<div class="form-floating mb-3">
-					<select class="form-select shadow" name="user_category" id="user_category" required>
+					<select class="form-select shadow" name="category_id" id="category_id" required>
 						
 						@foreach ($categories as $category)
 							<option value="{{ $category->id }}">{{ $category->name }}</option>
 						@endforeach
 					
 					</select>
-					<label for="user_category">Selecione o tipo de usuário</label>
+					<label for="category_id">Selecione o tipo de usuário</label>
 				</div>
 				<div>
 					<button class="btn ms-auto d-block bg-watergreen text-white fw-bolder shadow" type="submit">Registrar</button>
